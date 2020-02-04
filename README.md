@@ -112,7 +112,7 @@
 `------------------------ after lunch ---------------------------------------------------`
 
   * What is Phoenix (second talk)
-  * Ready to create a new project using Phoenix
+  * Let's create a Blog post app using Phoenix
     * Create a new controller
     * Add a new rote into your router
     * Add your template
