@@ -113,72 +113,16 @@
 
   * What is Phoenix (second talk)
   * Let's create a Blog post app using Phoenix
-    * Create a new controller
+    * Create new phx project 
+    * Add a new controller
     * Add a new rote into your router
     * Add your template
     * Go to your browser
     * You did it!
-  * Create a REST API in just a few minutes
-    * Run this command in your terminal
-      ```
-      mix phx.gen.html Posts Post posts title:string url:string author:string description:string likes:integer
-      ```
-      If everything goes well you will get this message
-      ```
-      * creating lib/delirium_web/controllers/post_controller.ex
-      * creating lib/delirium_web/templates/post/edit.html.eex
-      * creating lib/delirium_web/templates/post/form.html.eex
-      * creating lib/delirium_web/templates/post/index.html.eex
-      * creating lib/delirium_web/templates/post/new.html.eex
-      * creating lib/delirium_web/templates/post/show.html.eex
-      * creating lib/delirium_web/views/post_view.ex
-      * creating test/delirium_web/controllers/post_controller_test.exs
-      * creating lib/delirium/posts/post.ex
-      * creating priv/repo/migrations/20190911150250_create_posts.exs
-      * creating lib/delirium/posts.ex
-      * injecting lib/delirium/posts.ex
-      * creating test/delirium/posts_test.exs
-      * injecting test/delirium/posts_test.exs
-
-      Add the resource to your browser scope in lib/delirium_web/router.ex:
-
-          resources "/posts", PostController
-
-
-      Remember to update your repository by running migrations:
-
-          $ mix ecto.migrate
-
-      ```
-      Lets follow the instructions to add the new route, go to router file lib/delirium_web/router.ex and add a new line `resources "/posts", PostController` under scope like below
-      ``` 
-      scope "/", DeliriumWeb do
-        pipe_through :browser # Use the default browser stack
-
-        get "/", PageController, :index
-
-        resources "/posts", PostController
-
-      end
-      ```
-      **Note: router.ex is in charge to handle all the request that we made
-
-      ```
-      mix ecto.migrate
-      Compiling 5 files (.ex)
-      Generated delirium app
-      [info] == Running Delirium.Repo.Migrations.CreatePosts.change/0 forward
-      [info] create table posts
-      [info] == Migrated in 0.0s
-      ```
-
-    * Open your browser /posts
-    * Pretty cool right! now you can
       * Create
       * Edit
       * Update
       * Delete
-    * Let's have a quit code review and try to figure out what is happening
     * Add a nice view
     * Well done 😀. You have your new blog post using  Elixir and Phoenix    
 
